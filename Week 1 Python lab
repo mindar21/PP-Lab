@@ -1,0 +1,118 @@
+# 1. Print "Hello, World!".
+print("Hello, World!")
+
+
+# 2. Calculate the sum of two numbers.
+def sum_of_two_numbers(a, b):
+    return a + b
+
+num1 = 5
+num2 = 10
+print("Sum:", sum_of_two_numbers(num1, num2))
+
+
+# 3. Find the square of a number.
+def square(num):
+    return num ** 2
+
+number = 4
+print("Square:", square(number))
+
+
+# 4. Accept the user's name and greet them with it.
+name = input("Enter your name: ")
+print("Hello,", name + "!")
+
+
+# 5. Check whether a number is even or odd.
+def check_even_odd(num):
+    return "Even" if num % 2 == 0 else "Odd"
+
+num = 7
+print("The number is", check_even_odd(num))
+
+
+# 6. Write a Python program that takes a list and returns a new list with unique elements of the first list.
+def unique_elements(lst):
+    return list(set(lst))
+
+sample_list = [1, 2, 2, 3, 4, 4, 5]
+print("Unique List:", unique_elements(sample_list))
+
+
+# 7. Convert Celsius to Fahrenheit.
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+celsius_temp = 25
+print("Fahrenheit:", celsius_to_fahrenheit(celsius_temp))
+
+
+# 8. Calculate the area of a circle.
+import math
+
+def area_of_circle(radius):
+    return math.pi * (radius ** 2)
+
+radius = 7
+print("Area of Circle:", area_of_circle(radius))
+
+
+# 9. Reverse a given string.
+def reverse_string(s):
+    return s[::-1]
+
+text = "Python"
+print("Reversed String:", reverse_string(text))
+
+
+# 10. Check if a number is a prime number.
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+num = 17
+print(f"Is {num} a prime number?", is_prime(num))
+
+
+# 11. Calculate the factorial of a number.
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+num = 5
+print("Factorial:", factorial(num))
+
+
+# 12. Find the largest item from a given list.
+def find_largest(lst):
+    return max(lst)
+
+numbers = [10, 20, 5, 8, 25]
+print("Largest number:", find_largest(numbers))
+
+
+# 13. Write a Python program to check whether a number is in a given range.
+def in_range(num, start, end):
+    return start <= num <= end
+
+num = 15
+start_range = 10
+end_range = 20
+print(f"Is {num} in range {start_range}-{end_range}?", in_range(num, start_range, end_range))
+
+
+# 14. Calculate the number of uppercase and lowercase letters in a string.
+def count_case(s):
+    upper = sum(1 for c in s if c.isupper())
+    lower = sum(1 for c in s if c.islower())
+    return upper, lower
+
+sample_text = "Hello World"
+upper_count, lower_count = count_case(sample_text)
+print("Uppercase Letters:", upper_count, "Lowercase Letters:", lower_count)
